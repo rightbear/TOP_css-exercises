@@ -27,3 +27,13 @@ We separated it out here to make it extra clear what has changed. */
   align-items: center;
   justify-content: center;
 }
+
+/*SOLUTION2: Found by myself */
+
+/*We direcly add margin:auto; in .box
+ 如果你設定 margin: auto 的話，在固定高度的 Flex 容器當中，他就會垂直置中對齊。*/ 
+
+ 
+.box {
+  margin: auto;
+}

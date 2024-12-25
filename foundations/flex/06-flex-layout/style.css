@@ -5,6 +5,22 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  /*The flex: 1 here is related to display: flex in body(father of .content)*/
+  /*Another SOLUTION is remove "flex: 1" and "justify-content: center;" in .content,
+   and just add "justify-content: space-between;" instead. */
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 img {
@@ -16,6 +32,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  padding: 8px 10px;
 }
 
 input {
@@ -23,4 +41,29 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+
+  /*We should remove the default values of padding and margin in u1*/
+  padding: 0;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: #666;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background: #eee;
 }
